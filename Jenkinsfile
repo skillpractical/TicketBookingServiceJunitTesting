@@ -5,7 +5,8 @@ pipeline {
             steps {
               /* bat "rmdir  /s /q TicketBookingServiceJunitTesting" */
                bat "git clone https://github.com/skillpractical/TicketBookingServiceJunitTesting.git JavaApp9"
-               bat "mvn clean -f TicketBookingServiceJunitTesting"
+               def mvnHome = tool name: 'mvn', type: 'maven'
+                bat "${mvnHome}/bin/mvn clean -f TicketBookingServiceJunitTesting"
             }
         }
         stage('install') {
