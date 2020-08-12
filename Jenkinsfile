@@ -4,7 +4,7 @@ pipeline {
         stage('git repo & clean') {
             steps {
               /* bat "rmdir  /s /q TicketBookingServiceJunitTesting" */
-               bat "git clone https://github.com/skillpractical/TicketBookingServiceJunitTesting.git JavaApp9"
+               bat "git clone https://github.com/skillpractical/TicketBookingServiceJunitTesting.git JavaApp10"
                def mvnHome = tool name: 'mvn', type: 'maven'
                 bat "${mvnHome}/bin/mvn clean -f TicketBookingServiceJunitTesting"
             }
