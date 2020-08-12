@@ -4,8 +4,8 @@ pipeline {
         stage('git repo & clean') {
             steps {
               /* bat "rmdir  /s /q TicketBookingServiceJunitTesting" */
-               bat "git clone https://github.com/skillpractical/TicketBookingServiceJunitTesting.git JavaApp11"
-               bat "mvn clean -f TicketBookingServiceJunitTesting"
+               bat "git clone https://github.com/skillpractical/TicketBookingServiceJunitTesting.git JavaApp12"
+               sh label: '', script: 'bat "mvn clean -f TicketBookingServiceJunitTesting"'
             }
         }
         stage('install') {
