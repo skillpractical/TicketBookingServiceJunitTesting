@@ -8,20 +8,5 @@ pipeline {
                sh 'mvn clean package'
             }
         }
-        stage('install') {
-            steps {
-                 sh label: '', script: 'bat "mvn install -f TicketBookingServiceJunitTesting"'
-               }
-        }
-        stage('test') {
-            steps {
-                sh label: '', script: 'bat "mvn test -f TicketBookingServiceJunitTesting"'
-              }
-        }
-        stage('package') {
-            steps {
-                bat "mvn package -f TicketBookingServiceJunitTesting"
-            }
-        }
-    }
+     }
 }
